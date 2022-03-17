@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block header %}{% include "header.html" %}{% endblock header %}
+
+{% block content %}
+    <div class="container-fluid thankyoupage thankyou">
+        <div class="container thanks">
+            <h2 class="mb-2"><b>THANK YOU <span><b>{{profile.first_name}}</b></span>!</b></h2>
+            <h5 class="mb-2">YOUR PURCHASE HAS BEEN CONFIRMED</h5>
+            <p><span>We take pride using only the best ingredients for the food that ends up on your table.
+                For every order, we confidently undertake the preparation process, crafting our food with test and true recipes. We hope you will love it and come back to try our other specialties.
+            </span></p>
+            <div class="button-group mt-5">
+                <a href="{% url 'index' %}" class="buttons">Back To Home 🏠</a>
+                <a href="{% url 'meals' %}" class="buttons">Continue Shopping 🛒</a>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+
+{% block footer %}{% include 'footer.html' %}{% endblock footer %}
