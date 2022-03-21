@@ -232,6 +232,7 @@ def placeorder(request):
     
     
 #add to cart
+@login_required(login_url='signin')
 def addtocart(request):
     # cart_code = str(uuid.uuid4())
     cartno = Profile.objects.get(user__username=request.user.username)
